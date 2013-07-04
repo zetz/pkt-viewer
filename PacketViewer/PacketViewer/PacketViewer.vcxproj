@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E453CB2D-5ADD-430D-9464-EA517804B8A9}</ProjectGuid>
+    <RootNamespace>PacketViewer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(pcap_sdk)\include\;$(wx_sdk_dir)\include;$(wx_sdk_dir)\lib\vc_lib\mswud\;$(boost_sdk)\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(pcap_sdk)\lib\;$(wx_sdk_dir)\lib\vc_lib\;$(boost_sdk)\lib\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(pcap_sdk)\include\;$(wx_sdk_dir)\include;$(wx_sdk_dir)\lib\vc_lib\mswu\;$(boost_sdk)\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(pcap_sdk)\lib\;$(wx_sdk_dir)\lib\vc_lib\;$(boost_sdk)\lib\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_DEBUG;__WXMSW__;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wxbase29ud.lib;wxbase29ud_net.lib;wxbase29ud_xml.lib;wxexpatd.lib;wxjpegd.lib;wxmsw29ud_adv.lib;wxmsw29ud_aui.lib;wxmsw29ud_core.lib;wxmsw29ud_gl.lib;wxmsw29ud_html.lib;wxmsw29ud_media.lib;wxmsw29ud_propgrid.lib;wxmsw29ud_qa.lib;wxmsw29ud_ribbon.lib;wxmsw29ud_richtext.lib;wxmsw29ud_stc.lib;wxmsw29ud_webview.lib;wxmsw29ud_xrc.lib;wxpngd.lib;wxregexud.lib;wxscintillad.lib;wxtiffd.lib;wxzlibd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>wxbase29u.lib;wxbase29u_net.lib;wxbase29u_xml.lib;wxexpat.lib;wxjpeg.lib;wxmsw29u_adv.lib;wxmsw29u_aui.lib;wxmsw29u_core.lib;wxmsw29u_gl.lib;wxmsw29u_html.lib;wxmsw29u_media.lib;wxmsw29u_propgrid.lib;wxmsw29u_qa.lib;wxmsw29u_ribbon.lib;wxmsw29u_richtext.lib;wxmsw29u_stc.lib;wxmsw29u_webview.lib;wxmsw29u_xrc.lib;wxpng.lib;wxregexu.lib;wxscintilla.lib;wxtiff.lib;wxzlib.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CaptureThread.h" />
+    <ClInclude Include="DeviceDlg.h" />
+    <ClInclude Include="EtherDefine.h" />
+    <ClInclude Include="FormDesign.h" />
+    <ClInclude Include="MainFrame.h" />
+    <ClInclude Include="PacketCapturer.h" />
+    <ClInclude Include="ProcessDlg.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CaptureThread.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DeviceDlg.cpp" />
+    <ClCompile Include="FormDesign.cpp" />
+    <ClCompile Include="MainFrame.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PacketCapturer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ProcessDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pktview.fbp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
